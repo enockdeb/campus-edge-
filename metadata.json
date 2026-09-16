@@ -1,6 +1,6 @@
 {
   "name": "Campus Edge - Nursing & Midwifery Hub",
-  "description": "Integrated campus productivity dashboard for nursing and midwifery students and faculty with facilitator content management (course builder, quiz creator, video masterclasses), AI clinical tutor, milestone-based curriculum paths, course registration, flashcards, and licensure prep.",
+  "description": "Integrated campus productivity dashboard for nursing and midwifery students and faculty with native Classroom Hub (stream announcements, coursework, assignments, and AI clinical reviewers), AI clinical tutor, milestone-based curriculum paths, course registration, flashcards, and licensure prep.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

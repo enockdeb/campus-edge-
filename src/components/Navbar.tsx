@@ -91,6 +91,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   const navItems: { id: AppView; label: string; icon: React.ReactNode; badge?: string }[] = isTutorMode
     ? [
         { id: "tutor-dashboard", label: "Tutor & Facilitator Hub", icon: <Stethoscope className="w-4 h-4 text-emerald-500" />, badge: "Active" },
+        { id: "classroom", label: "Classroom Hub", icon: <GraduationCap className="w-4 h-4 text-emerald-500" />, badge: "LMS" },
         { id: "curriculum", label: "Curriculum Paths", icon: <BookOpen className="w-4 h-4" /> },
         { id: "quizzes", label: "Question Bank Preview", icon: <HelpCircle className="w-4 h-4" /> },
         { id: "videos", label: "Video Masterclasses", icon: <Video className="w-4 h-4 text-rose-500" /> },
@@ -98,6 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       ]
     : [
         { id: "dashboard", label: "Dashboard", icon: <Layers className="w-4 h-4" /> },
+        { id: "classroom", label: "Classroom Hub", icon: <GraduationCap className="w-4 h-4 text-emerald-500" />, badge: "AI LMS" },
         { id: "curriculum", label: "Curriculum Paths", icon: <BookOpen className="w-4 h-4" />, badge: "Milestones" },
         { id: "registration", label: "Course Registration", icon: <GraduationCap className="w-4 h-4 text-emerald-500" />, badge: "Enrollment" },
         { id: "videos", label: "Video Masterclasses", icon: <Video className="w-4 h-4 text-rose-500" />, badge: "Clinicals" },

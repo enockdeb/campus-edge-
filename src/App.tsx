@@ -44,6 +44,7 @@ import { CourseRegistrationView } from "./components/CourseRegistrationView";
 import { NotificationCenter } from "./components/NotificationCenter";
 import { VideoLecturesView } from "./components/VideoLecturesView";
 import { TutorDashboardView } from "./components/TutorDashboardView";
+import { ClassroomView } from "./components/ClassroomView";
 import {
   Bot,
   X,
@@ -148,7 +149,12 @@ export default function App() {
       const saved = localStorage.getItem("campusedge_courses");
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length >= initialCourses.length && parsed[0]?.milestones && parsed[0].milestones.length > 0) {
+        if (Array.isArray(parsed) && parsed[0]?.milestones && parsed[0].milestones.length > 0) {
+          const existingIds = new Set(parsed.map((c: any) => c.id));
+          const missing = initialCourses.filter(c => !existingIds.has(c.id));
+          if (missing.length > 0) {
+            return [...parsed, ...missing];
+          }
           return parsed;
         }
       }
@@ -176,13 +182,39 @@ export default function App() {
 
   // Flashcard Decks & Cards
   const [decks] = useState<FlashcardDeck[]>(() => {
-    const saved = localStorage.getItem("campusedge_decks");
-    return saved ? JSON.parse(saved) : initialFlashcardDecks;
+    try {
+      const saved = localStorage.getItem("campusedge_decks");
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          const existingIds = new Set(parsed.map((d: any) => d.id));
+          const missing = initialFlashcardDecks.filter(d => !existingIds.has(d.id));
+          if (missing.length > 0) return [...parsed, ...missing];
+          return parsed;
+        }
+      }
+    } catch (e) {
+      console.warn("Failed to load decks", e);
+    }
+    return initialFlashcardDecks;
   });
 
   const [flashcards, setFlashcards] = useState<Flashcard[]>(() => {
-    const saved = localStorage.getItem("campusedge_flashcards");
-    return saved ? JSON.parse(saved) : initialFlashcards;
+    try {
+      const saved = localStorage.getItem("campusedge_flashcards");
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          const existingIds = new Set(parsed.map((f: any) => f.id));
+          const missing = initialFlashcards.filter(f => !existingIds.has(f.id));
+          if (missing.length > 0) return [...parsed, ...missing];
+          return parsed;
+        }
+      }
+    } catch (e) {
+      console.warn("Failed to load flashcards", e);
+    }
+    return initialFlashcards;
   });
 
   // Forum Posts
@@ -243,7 +275,12 @@ export default function App() {
       const saved = localStorage.getItem("campusedge_quiz_questions");
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length >= initialQuizQuestions.length) {
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          const existingIds = new Set(parsed.map((q: any) => q.id));
+          const missing = initialQuizQuestions.filter(q => !existingIds.has(q.id));
+          if (missing.length > 0) {
+            return [...parsed, ...missing];
+          }
           return parsed;
         }
       }
@@ -641,6 +678,18 @@ export default function App() {
             onDismissNotification={handleDismissNotification}
             onOpenTutorWithTopic={(topic) => {
               setTutorQuery(`Please explain clinical protocols and evidence for: ${topic}`);
+              setShowTutorModal(true);
+            }}
+          />
+        )}
+
+        {currentView === "classroom" && (
+          <ClassroomView
+            userRole={authUser?.role || "student"}
+            localCourses={courses}
+            onNavigateToCurriculum={(courseId) => handleNavigate("curriculum", { courseId })}
+            onOpenTutorWithPrompt={(prompt) => {
+              setTutorQuery(prompt);
               setShowTutorModal(true);
             }}
           />

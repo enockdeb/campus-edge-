@@ -33,6 +33,7 @@ export interface EnrolledStudentItem {
 export type AppView =
   | "login"
   | "dashboard"
+  | "classroom"
   | "curriculum"
   | "registration"
   | "summarizer"
@@ -110,7 +111,11 @@ export interface CurriculumCourse {
     | "Foundations & Ethics"
     | "Anatomy & Foundations"
     | "Clinical Assessment"
-    | "Mental Health & Behavioral";
+    | "Mental Health & Behavioral"
+    | "Internal Medicine"
+    | "General Surgery"
+    | "Physiology"
+    | "Research & Biostatistics";
   credits: number;
   semester: string;
   instructor: string;
@@ -340,5 +345,106 @@ export interface QuizTrendData {
   midwiferyScore: number;
   nursingScore: number;
   topic: string;
+}
+
+export interface ClassroomComment {
+  id: string;
+  authorName: string;
+  authorRole: "student" | "teacher";
+  authorAvatar?: string;
+  content: string;
+  timestamp: string;
+}
+
+export interface ClassroomAnnouncement {
+  id: string;
+  courseId: string;
+  authorName: string;
+  authorRole: "teacher" | "student";
+  authorAvatar?: string;
+  title?: string;
+  text: string;
+  timestamp: string;
+  pinned?: boolean;
+  attachments?: Array<{
+    title: string;
+    url?: string;
+    type: "pdf" | "link" | "doc" | "video";
+  }>;
+  comments?: ClassroomComment[];
+}
+
+export interface ClassroomCourseWork {
+  id: string;
+  courseId: string;
+  title: string;
+  description: string;
+  topic: string;
+  maxPoints: number;
+  dueDate: string; // e.g. "2026-10-02"
+  dueTime?: string; // e.g. "23:59"
+  state: "PUBLISHED" | "DRAFT";
+  attachments?: Array<{
+    title: string;
+    url?: string;
+    type: "pdf" | "link" | "doc" | "video";
+  }>;
+  rubricCriteria?: string[];
+  clinicalScenario?: string;
+}
+
+export interface ClassroomSubmission {
+  id: string;
+  courseId: string;
+  courseWorkId: string;
+  studentId: string;
+  studentName: string;
+  studentEmail?: string;
+  studentAvatar?: string;
+  submittedAt?: string;
+  status: "assigned" | "turned_in" | "graded" | "late";
+  content: string;
+  attachedLinks?: string[];
+  grade?: number;
+  maxPoints?: number;
+  tutorFeedback?: string;
+  aiReview?: {
+    strengths?: string[];
+    improvements?: string[];
+    safetyNotes?: string[];
+    readinessScore?: number;
+    estimatedScore?: number;
+    rubricBreakdown?: Array<{ criterion: string; score: string; comment: string }>;
+    formativeFeedback?: string;
+  };
+}
+
+export interface ClassroomMember {
+  id: string;
+  courseId: string;
+  name: string;
+  email: string;
+  role: "teacher" | "co-teacher" | "student";
+  department?: string;
+  year?: string;
+  avatar?: string;
+  clinicalGroup?: string;
+}
+
+export interface ClassroomCourse {
+  id: string;
+  code: string;
+  name: string;
+  department: string;
+  section?: string;
+  room?: string;
+  instructor: string;
+  instructorTitle?: string;
+  instructorEmail?: string;
+  enrollmentCode: string;
+  bannerTheme: "emerald" | "sky" | "indigo" | "amber" | "rose" | "teal";
+  description?: string;
+  schedule?: string;
+  activeTerm?: string;
 }
 

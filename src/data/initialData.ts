@@ -1334,6 +1334,726 @@ export const initialCourses: CurriculumCourse[] = [
         ]
       }
     ]
+  },
+  {
+    id: "course-med-201",
+    code: "MED 201",
+    title: "Medicine",
+    department: "dual",
+    category: "Internal Medicine",
+    credits: 4,
+    semester: "2026/2027 Academic Session",
+    instructor: "Dr. Francisca Darko (MD, FWACP - Consultant Physician)",
+    description: "Systematic clinical internal medicine: pathophysiology, diagnostic criteria, pharmacotherapy, and nursing management of cardiovascular, respiratory, metabolic, and tropical infectious disease conditions.",
+    totalMilestones: 4,
+    completedMilestones: 2,
+    colorScheme: "sky",
+    fees: {
+      tuitionFee: 190,
+      labFee: 50,
+      councilExamFee: 30
+    },
+    schedule: "Tuesdays & Thursdays 08:00 - 10:30 AM",
+    clinicalHospitalSite: "Korle Bu Teaching Hospital - Medical Block & Acute ICU",
+    prerequisites: ["ANAT 101", "PHAR 204"],
+    capacity: 65,
+    enrolledCount: 58,
+    isRegistered: true,
+    registrationOpen: true,
+    milestones: [
+      {
+        id: "m-med-1",
+        milestoneNumber: 1,
+        title: "Cardiovascular Medicine: Hypertension, Acute Coronary Syndrome & Heart Failure",
+        description: "12-lead ECG interpretation, acute myocardial infarction protocols, STEMI vs NSTEMI risk stratification, and acute pulmonary edema management.",
+        weekNumber: 1,
+        status: "completed",
+        clinicalCompetencies: [
+          "12-Lead ECG interpretation (ST elevation/depression, T-wave inversion)",
+          "Heart failure staging (NYHA Class I-IV) & strict fluid balance charting",
+          "Emergency sublingual nitrate and beta-blocker administration safety"
+        ],
+        badgeUnlocked: "Cardiology Specialist",
+        steps: [
+          {
+            id: "s-med-1-1",
+            title: "Lecture Summary: Acute Coronary Syndromes & MONA-B Resuscitation",
+            type: "lecture_summary",
+            estimatedMinutes: 15,
+            completed: true,
+            contentPreview: "Morphine, Oxygen, Nitroglycerin, Aspirin, and Beta-blocker administration sequence and contraindications."
+          },
+          {
+            id: "s-med-1-2",
+            title: "Flashcard Drill: Cardiovascular Pharmacotherapy & Emergency Protocols",
+            type: "flashcard_drill",
+            estimatedMinutes: 15,
+            completed: true,
+            contentPreview: "15 flashcards on ACE inhibitors, ARBs, diuretics, digoxin toxicity signs, and antiarrhythmic agents."
+          },
+          {
+            id: "s-med-1-3",
+            title: "Case Quiz: Hypertensive Crisis & Acute Pulmonary Edema Triage",
+            type: "case_quiz",
+            estimatedMinutes: 15,
+            completed: true,
+            contentPreview: "Clinical scenarios differentiating hypertensive urgency vs emergency with target organ damage."
+          },
+          {
+            id: "s-med-1-4",
+            title: "Clinical Checklist: Daily Fluid Balance & JVP Assessment",
+            type: "clinical_checklist",
+            estimatedMinutes: 10,
+            completed: true,
+            contentPreview: "Jugular venous pressure measurement at 45 degrees, dependent edema pitting grading (+1 to +4)."
+          }
+        ]
+      },
+      {
+        id: "m-med-2",
+        milestoneNumber: 2,
+        title: "Respiratory Medicine: Severe Pneumonia, COPD & Acute Asthma",
+        description: "Pathophysiology of respiratory failure, CURB-65 severity scoring, nebulized bronchodilator therapy, and arterial blood gas interpretation.",
+        weekNumber: 2,
+        status: "completed",
+        clinicalCompetencies: [
+          "CURB-65 pneumonia severity score calculation for admission vs ICU referral",
+          "Metered-dose inhaler spacer technique & peak flow monitoring",
+          "Arterial blood gas (ABG) identification of Type 1 vs Type 2 respiratory failure"
+        ],
+        badgeUnlocked: "Pulmonary Care Specialist",
+        steps: [
+          {
+            id: "s-med-2-1",
+            title: "Lecture Note: CURB-65 Stratification & Targeted Antibiotic Protocols",
+            type: "lecture_summary",
+            estimatedMinutes: 15,
+            completed: true,
+            contentPreview: "Confusion, Urea >7mmol/L, Respiratory Rate ≥30, BP <90/60, Age ≥65 scoring algorithm."
+          },
+          {
+            id: "s-med-2-2",
+            title: "Flashcard Drill: Respiratory Pharmacology: Inhalers & Corticosteroids",
+            type: "flashcard_drill",
+            estimatedMinutes: 12,
+            completed: true,
+            contentPreview: "Short-acting beta agonists (SABA), long-acting muscarinic antagonists (LAMA), and inhaled corticosteroids."
+          },
+          {
+            id: "s-med-2-3",
+            title: "Case Quiz: Acute Severe Asthma Status Asthmaticus Escalation",
+            type: "case_quiz",
+            estimatedMinutes: 15,
+            completed: true,
+            contentPreview: "Silent chest emergency indicators, magnesium sulfate IV, and critical intubation thresholds."
+          }
+        ]
+      },
+      {
+        id: "m-med-3",
+        milestoneNumber: 3,
+        title: "Endocrine & Metabolic Medicine: Diabetes Mellitus, DKA & HHS Protocols",
+        description: "Glycemic targets, insulin sliding scales, acute complications (DKA vs HHS), and thyroid storm vs myxedema coma stabilization.",
+        weekNumber: 3,
+        status: "in_progress",
+        clinicalCompetencies: [
+          "Diabetic ketoacidosis 4-hour IV fluid & soluble insulin titration",
+          "Hypoglycemia Rule of 15 emergency bedside management",
+          "Point-of-care blood ketone monitoring & potassium supplementation rules"
+        ],
+        badgeUnlocked: "Metabolic Care Lead",
+        steps: [
+          {
+            id: "s-med-3-1",
+            title: "Core Lecture: DKA vs Hyperosmolar Hyperglycemic State (HHS)",
+            type: "lecture_summary",
+            estimatedMinutes: 18,
+            completed: true,
+            contentPreview: "Ketonemia, high anion gap metabolic acidosis, hyperosmolality, and fluid deficit replacement formulas."
+          },
+          {
+            id: "s-med-3-2",
+            title: "Clinical Checklist: Continuous IV Insulin Infusion & Potassium Protocol",
+            type: "clinical_checklist",
+            estimatedMinutes: 12,
+            completed: false,
+            contentPreview: "Checking serum potassium prior to starting insulin; hourly blood glucose charting and dextrose transition."
+          },
+          {
+            id: "s-med-3-3",
+            title: "Case Quiz: Hypoglycemic Coma in Ward Patient on Glibenclamide",
+            type: "case_quiz",
+            estimatedMinutes: 15,
+            completed: false,
+            contentPreview: "Managing sulfonylurea-induced prolonged hypoglycemia with 50% IV Dextrose and monitoring."
+          }
+        ]
+      },
+      {
+        id: "m-med-4",
+        milestoneNumber: 4,
+        title: "Infectious Diseases & Tropical Medicine: Malaria, Typhoid & Sepsis 6",
+        description: "Endemic infectious disease triage, severe falciparum malaria complications, enteric fever bowel perforation surveillance, and Sepsis 6 bundle execution.",
+        weekNumber: 4,
+        status: "available",
+        clinicalCompetencies: [
+          "Severe malaria IV Artesunate reconstitution and dosing schedule",
+          "WHO Sepsis 6 bundle execution within 60 minutes of detection",
+          "High vaginal and blood culture sampling prior to broad-spectrum antimicrobials"
+        ],
+        badgeUnlocked: "Infectious Disease Triage",
+        steps: [
+          {
+            id: "s-med-4-1",
+            title: "Lecture Note: Severe Malaria: Cerebral Malaria, Acidosis & Blackwater Fever",
+            type: "lecture_summary",
+            estimatedMinutes: 15,
+            completed: false,
+            contentPreview: "Artesunate 2.4 mg/kg at 0, 12, 24 hours, hypoglycemia surveillance, and avoiding fluid overload."
+          },
+          {
+            id: "s-med-4-2",
+            title: "Clinical Checklist: Sepsis 6 Bundle First-Hour Execution",
+            type: "clinical_checklist",
+            estimatedMinutes: 10,
+            completed: false,
+            contentPreview: "Give 3 (Oxygen, IV Fluids, Antibiotics) and Take 3 (Blood Cultures, Lactate, Urine Output)."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "course-surg-201",
+    code: "SURG 201",
+    title: "Surgery",
+    department: "dual",
+    category: "General Surgery",
+    credits: 4,
+    semester: "2026/2027 Academic Session",
+    instructor: "Prof. Samuel Antwi-Boasiako (FWACS - Consultant Surgeon)",
+    description: "Core principles of general and perioperative surgery: surgical asepsis, operating theatre protocol, acute surgical abdomen, wound dynamics, surgical drains, and post-operative emergency care.",
+    totalMilestones: 4,
+    completedMilestones: 2,
+    colorScheme: "indigo",
+    fees: {
+      tuitionFee: 195,
+      labFee: 55,
+      councilExamFee: 30
+    },
+    schedule: "Mondays & Fridays 08:30 - 11:30 AM",
+    clinicalHospitalSite: "37 Military Hospital - Surgical Theatres & Wards",
+    prerequisites: ["ANAT 101", "MED 210"],
+    capacity: 60,
+    enrolledCount: 54,
+    isRegistered: true,
+    registrationOpen: true,
+    milestones: [
+      {
+        id: "m-surg-1",
+        milestoneNumber: 1,
+        title: "Perioperative Principles, Operating Theatre Asepsis & WHO Checklist",
+        description: "Operating suite zoning, surgical scrub and gowning protocols, informed consent, and comprehensive execution of the WHO Surgical Safety Checklist.",
+        weekNumber: 1,
+        status: "completed",
+        clinicalCompetencies: [
+          "Surgical hand scrub, gowning and closed gloving technique",
+          "WHO Surgical Safety Checklist execution (Sign In, Time Out, Sign Out)",
+          "Verification of informed consent and pre-op fasting (ERAS) protocols"
+        ],
+        badgeUnlocked: "Theatre Asepsis Lead",
+        steps: [
+          {
+            id: "s-surg-1-1",
+            title: "Lecture Summary: Surgical Theatre Architecture & Sterile Zones",
+            type: "lecture_summary",
+            estimatedMinutes: 14,
+            completed: true,
+            contentPreview: "Unrestricted, semi-restricted, and restricted sterile zones, laminar airflow, and traffic control."
+          },
+          {
+            id: "s-surg-1-2",
+            title: "Flashcard Drill: Surgical Instruments, Suture Sizes & Needle Types",
+            type: "flashcard_drill",
+            estimatedMinutes: 15,
+            completed: true,
+            contentPreview: "18 flashcards covering absorbable vs non-absorbable sutures, Mayo scissors, and tissue forceps."
+          },
+          {
+            id: "s-surg-1-3",
+            title: "Clinical Checklist: Pre-Operative Ward Checklist & ERAS Protocol",
+            type: "clinical_checklist",
+            estimatedMinutes: 10,
+            completed: true,
+            contentPreview: "Skin preparation, site marking, baseline vitals, jewelry removal, and medication reconciliation."
+          }
+        ]
+      },
+      {
+        id: "m-surg-2",
+        milestoneNumber: 2,
+        title: "The Acute Surgical Abdomen: Appendicitis, Intestinal Obstruction & Peritonitis",
+        description: "Clinical evaluation of acute abdominal pain, signs of peritonism (guarding, rigidity), Alvarado score for appendicitis, and bowel decompression.",
+        weekNumber: 2,
+        status: "completed",
+        clinicalCompetencies: [
+          "Detection of peritoneal signs (involuntary guarding, rebound tenderness, board-like rigidity)",
+          "Nasogastric tube insertion and wide-bore suction in mechanical bowel obstruction",
+          "Alvarado scoring calculation for acute appendicitis surgical indication"
+        ],
+        badgeUnlocked: "Acute Abdomen Evaluator",
+        steps: [
+          {
+            id: "s-surg-2-1",
+            title: "Lecture Note: Small vs Large Bowel Obstruction Clinical Signs",
+            type: "lecture_summary",
+            estimatedMinutes: 15,
+            completed: true,
+            contentPreview: "Colicky abdominal pain, projectile bilious vomiting, distension, absolute constipation, and plain abdominal X-ray step-ladder fluid levels."
+          },
+          {
+            id: "s-surg-2-2",
+            title: "Case Quiz: Perforated Peptic Ulcer vs Ruptured Appendix Triage",
+            type: "case_quiz",
+            estimatedMinutes: 15,
+            completed: true,
+            contentPreview: "Erect chest X-ray free air under diaphragm (pneumoperitoneum) and emergency laparotomy resuscitation."
+          },
+          {
+            id: "s-surg-2-3",
+            title: "Flashcard Drill: Acute Abdominal Emergencies & Surgical Differentials",
+            type: "flashcard_drill",
+            estimatedMinutes: 12,
+            completed: true,
+            contentPreview: "Intussusception, strangulated inguinal hernia, mesenteric ischemia, and ectopic pregnancy."
+          }
+        ]
+      },
+      {
+        id: "m-surg-3",
+        milestoneNumber: 3,
+        title: "Surgical Wounds, Modern Dressings, Drains & Suture Removal",
+        description: "Surgical wound healing stages, classification of surgical wounds, negative pressure wound therapy (NPWT), closed suction drain care, and wound dehiscence response.",
+        weekNumber: 3,
+        status: "in_progress",
+        clinicalCompetencies: [
+          "Jackson-Pratt and Redivac closed-suction drain milking and output recording",
+          "Aseptic dressing changes for clean-contaminated and infected surgical wounds",
+          "Immediate emergency nursing management of acute abdominal wound evisceration"
+        ],
+        badgeUnlocked: "Wound & Drain Specialist",
+        steps: [
+          {
+            id: "s-surg-3-1",
+            title: "Core Lecture: Surgical Wound Classification (Classes I-IV)",
+            type: "lecture_summary",
+            estimatedMinutes: 15,
+            completed: true,
+            contentPreview: "Clean, clean-contaminated, contaminated, and dirty-infected surgical incisions and SSI risk."
+          },
+          {
+            id: "s-surg-3-2",
+            title: "Clinical Checklist: Acute Wound Dehiscence & Evisceration Protocol",
+            type: "clinical_checklist",
+            estimatedMinutes: 12,
+            completed: false,
+            contentPreview: "Position patient low-Fowlers with knees flexed, cover exposed viscera with sterile saline-soaked gauze, notify surgical team STAT."
+          },
+          {
+            id: "s-surg-3-3",
+            title: "Flashcard Drill: Surgical Drains: Active vs Passive (Corrugated vs Blake vs Redivac)",
+            type: "flashcard_drill",
+            estimatedMinutes: 10,
+            completed: false,
+            contentPreview: "Mechanism of action, measuring output, detecting bile/fecal/chyle leaks, and removal criteria."
+          }
+        ]
+      },
+      {
+        id: "m-surg-4",
+        milestoneNumber: 4,
+        title: "Post-Operative Complications: Hemorrhage, Shock & DVT Prophylaxis",
+        description: "Post-anesthesia recovery room (PACU) Aldrete scoring, primary vs reactionary vs secondary hemorrhage, and VTE thromboprophylaxis.",
+        weekNumber: 4,
+        status: "available",
+        clinicalCompetencies: [
+          "Post-operative hypovolemic shock detection & early transfusion triggers",
+          "Caprini risk assessment and sequential compression device (SCD) application",
+          "Incentive spirometry coaching to prevent post-op basal atelectasis"
+        ],
+        badgeUnlocked: "Post-Op Recovery Guardian",
+        steps: [
+          {
+            id: "s-surg-4-1",
+            title: "Lecture Note: Reactionary Hemorrhage vs Slipped Ligature in First 24 Hours",
+            type: "lecture_summary",
+            estimatedMinutes: 14,
+            completed: false,
+            contentPreview: "Distinguishing bleeding as blood pressure normalizes post-anesthesia versus delayed surgical infection."
+          },
+          {
+            id: "s-surg-4-2",
+            title: "Case Quiz: Post-Operative Fever on Day 1 vs Day 3 vs Day 5 (The 5 Ws)",
+            type: "case_quiz",
+            estimatedMinutes: 15,
+            completed: false,
+            contentPreview: "Wind (Atelectasis), Water (UTI), Wound (SSI), Walking (DVT), Wonder drugs (Medication fever)."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "course-phys-101",
+    code: "PHYS 101",
+    title: "Physiology",
+    department: "dual",
+    category: "Physiology",
+    credits: 4,
+    semester: "2026/2027 Academic Session",
+    instructor: "Dr. Cynthia Agyemang (PhD - Senior Medical Physiologist)",
+    description: "Systematic human medical physiology: cellular homeostasis, electrophysiology, neuro-endocrine signaling, cardiovascular hemodynamics, pulmonary gas exchange, renal clearance, and acid-base equilibrium.",
+    totalMilestones: 4,
+    completedMilestones: 2,
+    colorScheme: "emerald",
+    fees: {
+      tuitionFee: 175,
+      labFee: 40,
+      councilExamFee: 20
+    },
+    schedule: "Wednesdays & Fridays 10:00 AM - 12:30 PM",
+    clinicalHospitalSite: "College of Health Sciences - Physiology Laboratory",
+    prerequisites: ["BIOL 101"],
+    capacity: 70,
+    enrolledCount: 66,
+    isRegistered: true,
+    registrationOpen: true,
+    milestones: [
+      {
+        id: "m-phys-1",
+        milestoneNumber: 1,
+        title: "Cellular Homeostasis, Membrane Transport & Action Potentials",
+        description: "Resting membrane potentials, voltage-gated ion channels, Nernst and Goldman equations, neuromuscular transmission, and excitation-contraction coupling.",
+        weekNumber: 1,
+        status: "completed",
+        clinicalCompetencies: [
+          "Calculation and interpretation of resting membrane potential in excitable tissues",
+          "Neuromuscular junction transmission & acetylcholinesterase mechanism",
+          "Capillary Starling forces and pathophysiological edema formation"
+        ],
+        badgeUnlocked: "Cellular Physiology Scholar",
+        steps: [
+          {
+            id: "s-phys-1-1",
+            title: "Lecture Summary: Na+/K+ ATPase Pump & Neuronal Action Potential Phases",
+            type: "lecture_summary",
+            estimatedMinutes: 16,
+            completed: true,
+            contentPreview: "Depolarization, overshoot, repolarization, and hyperpolarization ion permeability dynamics."
+          },
+          {
+            id: "s-phys-1-2",
+            title: "Flashcard Drill: Ion Channel Kinetics & Refractory Periods",
+            type: "flashcard_drill",
+            estimatedMinutes: 14,
+            completed: true,
+            contentPreview: "Absolute vs relative refractory period, tetrodotoxin effects, and hypocalcemic tetany."
+          },
+          {
+            id: "s-phys-1-3",
+            title: "Case Quiz: Clinical Consequences of Hyperkalemia on Cardiac Excitability",
+            type: "case_quiz",
+            estimatedMinutes: 15,
+            completed: true,
+            contentPreview: "Tall peaked T-waves, PR prolongation, QRS widening, and loss of P waves in severe hyperkalemia."
+          }
+        ]
+      },
+      {
+        id: "m-phys-2",
+        milestoneNumber: 2,
+        title: "Cardiovascular Hemodynamics, Wiggers Diagram & BP Regulation",
+        description: "Cardiac cycle phases, ventricular pressure-volume loops, Frank-Starling law, baroreceptor reflex, and the renin-angiotensin-aldosterone axis.",
+        weekNumber: 2,
+        status: "completed",
+        clinicalCompetencies: [
+          "Wiggers diagram analysis correlating valve events with S1/S2 heart sounds",
+          "Baroreceptor reflex mediation in acute orthostatic postural hypotension",
+          "Frank-Starling length-tension relationship in compensated vs decompensated heart failure"
+        ],
+        badgeUnlocked: "Hemodynamics Master",
+        steps: [
+          {
+            id: "s-phys-2-1",
+            title: "Lecture Note: Cardiac Output = Stroke Volume × Heart Rate Mechanics",
+            type: "lecture_summary",
+            estimatedMinutes: 16,
+            completed: true,
+            contentPreview: "Preload (end-diastolic volume), afterload (systemic vascular resistance), and contractility determinants."
+          },
+          {
+            id: "s-phys-2-2",
+            title: "Flashcard Drill: The Wiggers Diagram & Cardiac Pressure Traces",
+            type: "flashcard_drill",
+            estimatedMinutes: 12,
+            completed: true,
+            contentPreview: "Isovolumetric contraction, rapid ejection, isovolumetric relaxation, and rapid ventricular filling."
+          },
+          {
+            id: "s-phys-2-3",
+            title: "Clinical Checklist: Orthostatic Blood Pressure & Pulse Reflex Assessment",
+            type: "clinical_checklist",
+            estimatedMinutes: 10,
+            completed: true,
+            contentPreview: "Supine vs standing BP at 1 and 3 minutes; drop >20 mmHg systolic or >10 mmHg diastolic."
+          }
+        ]
+      },
+      {
+        id: "m-phys-3",
+        milestoneNumber: 3,
+        title: "Pulmonary Mechanics, Gas Transport & Ventilation-Perfusion (V/Q)",
+        description: "Alveolar gas exchange, oxyhemoglobin dissociation curve dynamics, compliance, surfactant role, and ventilation-perfusion matching.",
+        weekNumber: 3,
+        status: "in_progress",
+        clinicalCompetencies: [
+          "Oxyhemoglobin dissociation curve shifts (Bohr effect, pH, temperature, 2,3-DPG)",
+          "Spirometry lung volumes interpretation (TLC, VC, FEV1/FVC ratio)",
+          "Differentiating anatomical vs physiological dead space in hypoxemia"
+        ],
+        badgeUnlocked: "Respiration Physiologist",
+        steps: [
+          {
+            id: "s-phys-3-1",
+            title: "Core Lecture: The Oxyhemoglobin Dissociation Curve & Tissue Delivery",
+            type: "lecture_summary",
+            estimatedMinutes: 15,
+            completed: true,
+            contentPreview: "Right shift (increased oxygen unloading) vs Left shift (increased oxygen affinity, hypothermia, alkalosis)."
+          },
+          {
+            id: "s-phys-3-2",
+            title: "Flashcard Drill: Lung Volumes, Capacities & Surfactant Surface Tension",
+            type: "flashcard_drill",
+            estimatedMinutes: 12,
+            completed: false,
+            contentPreview: "Tidal volume, inspiratory reserve, functional residual capacity, and Laplace's law for alveoli."
+          },
+          {
+            id: "s-phys-3-3",
+            title: "Case Quiz: High Altitude Acclimatization & 2,3-DPG Synthesis",
+            type: "case_quiz",
+            estimatedMinutes: 15,
+            completed: false,
+            contentPreview: "Hypoxic ventilatory response, respiratory alkalosis, erythropoietin secretion, and renal compensation."
+          }
+        ]
+      },
+      {
+        id: "m-phys-4",
+        milestoneNumber: 4,
+        title: "Renal Filtration, Countercurrent Multiplier & Acid-Base Buffers",
+        description: "Glomerular filtration rate (GFR) regulation, tubule transport mechanics, loop of Henle countercurrent system, and chemical buffer systems.",
+        weekNumber: 4,
+        status: "available",
+        clinicalCompetencies: [
+          "Glomerular filtration rate (GFR) calculation and tubuloglomerular feedback",
+          "Renal bicarbonate reabsorption and net acid excretion mechanics",
+          "Countercurrent multiplier mechanism in generating hyperosmotic medullary gradients"
+        ],
+        badgeUnlocked: "Renal & Buffer Specialist",
+        steps: [
+          {
+            id: "s-phys-4-1",
+            title: "Lecture Note: Nephron Segmental Solute & Water Reabsorption",
+            type: "lecture_summary",
+            estimatedMinutes: 15,
+            completed: false,
+            contentPreview: "Proximal convoluted tubule 65% isosmotic reabsorption, loop of Henle concentration, distal tubule aldosterone/ADH control."
+          },
+          {
+            id: "s-phys-4-2",
+            title: "Case Quiz: Renal Compensation for Chronic Respiratory Acidosis",
+            type: "case_quiz",
+            estimatedMinutes: 15,
+            completed: false,
+            contentPreview: "Evaluating elevated PaCO2 with compensating serum bicarbonate rise in COPD patients."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "course-res-301",
+    code: "RES 301",
+    title: "Research Methods",
+    department: "dual",
+    category: "Research & Biostatistics",
+    credits: 3,
+    semester: "2026/2027 Academic Session",
+    instructor: "Prof. Eric Osei-Tutu (PhD, MPH - Director of Health Research)",
+    description: "Scientific health research methodology: research question formulation, study designs, sampling techniques, questionnaire development, research ethics & IRB protocols, biostatistics, and evidence-based nursing & midwifery practice.",
+    totalMilestones: 4,
+    completedMilestones: 1,
+    colorScheme: "violet",
+    fees: {
+      tuitionFee: 170,
+      labFee: 35,
+      councilExamFee: 25
+    },
+    schedule: "Tuesdays 02:00 - 05:00 PM",
+    clinicalHospitalSite: "Health Research Centre & Academic Computer Lab",
+    prerequisites: ["ETH 101"],
+    capacity: 65,
+    enrolledCount: 60,
+    isRegistered: true,
+    registrationOpen: true,
+    milestones: [
+      {
+        id: "m-res-1",
+        milestoneNumber: 1,
+        title: "Problem Identification, Literature Review & Conceptual Frameworks",
+        description: "Formulating researchable clinical problems, developing PICO clinical research questions, Boolean operators in PubMed/CINAHL, and conceptual framework design.",
+        weekNumber: 1,
+        status: "completed",
+        clinicalCompetencies: [
+          "PICO (Population, Intervention, Comparison, Outcome) framework application",
+          "Systematic literature retrieval using MeSH terms and boolean search operators",
+          "Synthesis of empirical literature into defensible problem statements"
+        ],
+        badgeUnlocked: "Research Inquirer",
+        steps: [
+          {
+            id: "s-res-1-1",
+            title: "Lecture Summary: Developing Clinical Research Problems & PICO Formulation",
+            type: "lecture_summary",
+            estimatedMinutes: 15,
+            completed: true,
+            contentPreview: "Turning bedside clinical dilemmas into testable quantitative and qualitative research inquiries."
+          },
+          {
+            id: "s-res-1-2",
+            title: "Flashcard Drill: Research Variables, Hypotheses & Conceptual Frameworks",
+            type: "flashcard_drill",
+            estimatedMinutes: 12,
+            completed: true,
+            contentPreview: "Independent vs dependent vs confounding variables, null vs alternative hypotheses, mediating factors."
+          },
+          {
+            id: "s-res-1-3",
+            title: "Case Quiz: Critiquing Nursing Journal Abstracts & Methodological Rigor",
+            type: "case_quiz",
+            estimatedMinutes: 15,
+            completed: true,
+            contentPreview: "Identifying sample bias, lack of control group, and threats to internal validity in published papers."
+          }
+        ]
+      },
+      {
+        id: "m-res-2",
+        milestoneNumber: 2,
+        title: "Epidemiological & Health Research Designs: Quantitative vs Qualitative",
+        description: "Observational designs (descriptive, cross-sectional, case-control, cohort), experimental designs (RCTs, quasi-experimental), and qualitative phenomenological approaches.",
+        weekNumber: 2,
+        status: "in_progress",
+        clinicalCompetencies: [
+          "Cross-sectional vs Case-Control vs Prospective Cohort study design selection",
+          "Randomized Controlled Trial (RCT) methodology: randomization, allocation concealment & blinding",
+          "Qualitative research methods: Focus Group Discussions (FGD) and thematic analysis"
+        ],
+        badgeUnlocked: "Study Design Architect",
+        steps: [
+          {
+            id: "s-res-2-1",
+            title: "Core Lecture: The Evidence-Based Practice (EBP) Hierarchy Pyramid",
+            type: "lecture_summary",
+            estimatedMinutes: 15,
+            completed: true,
+            contentPreview: "Systematic reviews, meta-analyses, RCTs, cohort studies, case-control, cross-sectional, and expert opinion."
+          },
+          {
+            id: "s-res-2-2",
+            title: "Flashcard Drill: Observational vs Experimental Epidemiological Designs",
+            type: "flashcard_drill",
+            estimatedMinutes: 12,
+            completed: false,
+            contentPreview: "Relative risk (RR) in cohort studies vs Odds Ratio (OR) in case-control studies, recall bias."
+          },
+          {
+            id: "s-res-2-3",
+            title: "Case Quiz: Selecting the Optimal Design for Postpartum Infection Incidence",
+            type: "case_quiz",
+            estimatedMinutes: 15,
+            completed: false,
+            contentPreview: "Evaluating cost, time, rare outcomes, and ethical feasibility when choosing study models."
+          }
+        ]
+      },
+      {
+        id: "m-res-3",
+        milestoneNumber: 3,
+        title: "Sampling Techniques, Sample Size Estimation & Data Collection Tools",
+        description: "Probability sampling (simple random, stratified, cluster, systematic) vs non-probability sampling (purposive, snowball), questionnaire design, validity, and reliability.",
+        weekNumber: 3,
+        status: "available",
+        clinicalCompetencies: [
+          "Appropriate probability vs non-probability sampling strategy selection",
+          "Instrument validity (content, face, construct) and reliability (Cronbach's alpha > 0.70)",
+          "Sample size estimation using Yamane and Cochran formulas with margin of error"
+        ],
+        badgeUnlocked: "Sampling & Measurement Lead",
+        steps: [
+          {
+            id: "s-res-3-1",
+            title: "Lecture Note: Designing Valid & Reliable Clinical Questionnaires",
+            type: "lecture_summary",
+            estimatedMinutes: 15,
+            completed: false,
+            contentPreview: "Likert scales, avoiding leading/double-barreled questions, translation, and back-translation."
+          },
+          {
+            id: "s-res-3-2",
+            title: "Clinical Checklist: Pre-Testing & Pilot-Testing Research Instruments",
+            type: "clinical_checklist",
+            estimatedMinutes: 10,
+            completed: false,
+            contentPreview: "Pilot testing on 10% sample outside study area, calculating item completion times and clarity."
+          }
+        ]
+      },
+      {
+        id: "m-res-4",
+        milestoneNumber: 4,
+        title: "Research Ethics (IRB/NMC), Biostatistics & Evidence-Based Translation",
+        description: "Institutional Review Board (IRB) ethical submission, Belmont Report principles, p-values, confidence intervals, parametric vs non-parametric tests, and bedside translation.",
+        weekNumber: 4,
+        status: "locked",
+        clinicalCompetencies: [
+          "IRB ethical proposal preparation, participant consent, and data anonymization",
+          "Biostatistical test selection (Chi-square for categorical data, t-test for continuous means)",
+          "Translating research findings into clinical nursing Kardex protocols and hospital policy"
+        ],
+        badgeUnlocked: "Ethics & Biostats Scholar",
+        steps: [
+          {
+            id: "s-res-4-1",
+            title: "Lecture Summary: Ethical Principles: Autonomy, Beneficence, Non-Maleficence & Justice",
+            type: "lecture_summary",
+            estimatedMinutes: 15,
+            completed: false,
+            contentPreview: "Protection of vulnerable participants (neonates, pregnant mothers, unconscious patients) in health research."
+          },
+          {
+            id: "s-res-4-2",
+            title: "Case Quiz: Interpreting Statistical Significance: p-values & 95% Confidence Intervals",
+            type: "case_quiz",
+            estimatedMinutes: 15,
+            completed: false,
+            contentPreview: "Differentiating statistical significance (p < 0.05) from clinical relevance in patient outcomes."
+          }
+        ]
+      }
+    ]
   }
 ];
 
@@ -1377,10 +2097,154 @@ export const initialFlashcardDecks: FlashcardDeck[] = [
     iconName: "Stethoscope",
     description: "Sterile techniques, SBAR clinical handover, fluid resuscitation formulas, and post-op complications.",
     tags: ["ANTT", "SBAR", "Fluid Balance", "Shock"]
+  },
+  {
+    id: "deck-med-high-yield",
+    title: "Medicine (Internal Medicine & Therapeutics)",
+    category: "Internal Medicine",
+    cardCount: 20,
+    masteredCount: 12,
+    iconName: "Stethoscope",
+    description: "Acute coronary syndromes, heart failure NYHA classes, DKA management, and tropical infections.",
+    tags: ["ECG", "DKA", "CURB-65", "Heart Failure"]
+  },
+  {
+    id: "deck-surg-high-yield",
+    title: "Surgery (General & Perioperative Nursing)",
+    category: "General Surgery",
+    cardCount: 20,
+    masteredCount: 11,
+    iconName: "ShieldAlert",
+    description: "WHO Surgical Safety Checklist, acute abdomen differentials, surgical drains, and post-op shock.",
+    tags: ["Surgical Asepsis", "Acute Abdomen", "Wound Drains", "PACU"]
+  },
+  {
+    id: "deck-phys-high-yield",
+    title: "Physiology (Systemic & Medical Physiology)",
+    category: "Physiology",
+    cardCount: 22,
+    masteredCount: 14,
+    iconName: "Activity",
+    description: "Membrane electrophysiology, cardiac cycle Wiggers diagram, oxyhemoglobin curves, and renal acid-base.",
+    tags: ["Action Potential", "Wiggers Diagram", "Oxyhemoglobin", "GFR"]
+  },
+  {
+    id: "deck-res-high-yield",
+    title: "Research Methods & Biostatistics",
+    category: "Research & Biostatistics",
+    cardCount: 18,
+    masteredCount: 10,
+    iconName: "FileSpreadsheet",
+    description: "PICO framework, epidemiological study designs (RCT, cohort, case-control), sampling formulas, and IRB ethics.",
+    tags: ["PICO", "Study Designs", "Sampling", "Biostatistics"]
   }
 ];
 
 export const initialFlashcards: Flashcard[] = [
+  {
+    id: "fc-med-1",
+    deckId: "deck-med-high-yield",
+    deckTitle: "Medicine (Internal Medicine & Therapeutics)",
+    question: "What is the mnemonic and rationale for the initial emergency pharmacotherapy of Acute Coronary Syndrome (STEMI)?",
+    answer: "MONA-B: Morphine (pain & sympathetic drive reduction), Oxygen (if SpO2 < 90%), Nitrates (coronary vasodilation & preload reduction), Aspirin (300mg chewed for antiplatelet effect), and Beta-blockers (if no bradycardia or cardiogenic shock).",
+    explanation: "Rapid antiplatelet administration with coronary reperfusion strategy is the single most crucial factor reducing myocardial infarct mortality within the golden first hour.",
+    difficulty: "Medium",
+    tag: "Internal Medicine",
+    status: "mastered",
+    intervalDays: 14,
+    timesReviewed: 4
+  },
+  {
+    id: "fc-med-2",
+    deckId: "deck-med-high-yield",
+    deckTitle: "Medicine (Internal Medicine & Therapeutics)",
+    question: "In Diabetic Ketoacidosis (DKA), why must serum potassium be verified BEFORE initiating intravenous insulin infusion?",
+    answer: "Insulin drives potassium from extracellular fluid into cells. If serum potassium is < 3.3 mmol/L, giving insulin will cause severe, life-threatening hypokalemia and fatal cardiac arrhythmias. Potassium must be repleted first.",
+    explanation: "Standard DKA resuscitation protocols require holding insulin until potassium is ≥ 3.3 mmol/L, with 20-30 mEq K+ added per liter of IV maintenance fluid.",
+    difficulty: "Hard",
+    tag: "Internal Medicine",
+    status: "learning",
+    intervalDays: 3,
+    timesReviewed: 2
+  },
+  {
+    id: "fc-surg-1",
+    deckId: "deck-surg-high-yield",
+    deckTitle: "Surgery (General & Perioperative Nursing)",
+    question: "What are the three distinct pause phases of the WHO Surgical Safety Checklist and when does each occur?",
+    answer: "1. Sign In: Before induction of anesthesia (verifying identity, site, consent, allergies, airway risk)\n2. Time Out: Before skin incision (entire team introduces roles, confirms patient name, procedure, site, antibiotic prophylaxis, critical steps)\n3. Sign Out: Before patient leaves the operating room (instrument/sponge count, specimen labeling, key post-op recovery concerns).",
+    explanation: "Executing all 3 stages has been shown by WHO to reduce perioperative mortality and surgical site complications by over 36%.",
+    difficulty: "Medium",
+    tag: "General Surgery",
+    status: "mastered",
+    intervalDays: 18,
+    timesReviewed: 5
+  },
+  {
+    id: "fc-surg-2",
+    deckId: "deck-surg-high-yield",
+    deckTitle: "Surgery (General & Perioperative Nursing)",
+    question: "How do bowel sounds clinically differentiate mechanical small bowel obstruction from paralytic ileus?",
+    answer: "Mechanical bowel obstruction exhibits high-pitched, hyperactive, tinkling ('rushes and tinkles') bowel sounds as peristalsis fights the blockage. Paralytic ileus features completely absent or hypoactive bowel sounds due to neuromuscular bowel paralysis.",
+    explanation: "Mechanical obstruction requires surgical evaluation and decompression; paralytic ileus is managed conservatively with bowel rest, NG tube, and electrolyte correction.",
+    difficulty: "Medium",
+    tag: "General Surgery",
+    status: "learning",
+    intervalDays: 4,
+    timesReviewed: 3
+  },
+  {
+    id: "fc-phys-1",
+    deckId: "deck-phys-high-yield",
+    deckTitle: "Physiology (Systemic & Medical Physiology)",
+    question: "Which physiological factors cause a RIGHT shift of the oxyhemoglobin dissociation curve (Bohr Effect), and what is its physiological benefit?",
+    answer: "Factors: Increased PaCO2, decreased pH (acidosis), increased temperature, and increased 2,3-DPG (mnemonic: CADET face right - CO2, Acid, 2,3-DPG, Exercise, Temperature). Benefit: Decreases hemoglobin's affinity for O2, facilitating enhanced oxygen unloading into metabolically active tissues.",
+    explanation: "Exercising muscles produce CO2, lactic acid, and heat, naturally triggering right-shift unloading exactly where oxygen is needed most.",
+    difficulty: "Hard",
+    tag: "Physiology",
+    status: "mastered",
+    intervalDays: 16,
+    timesReviewed: 6
+  },
+  {
+    id: "fc-phys-2",
+    deckId: "deck-phys-high-yield",
+    deckTitle: "Physiology (Systemic & Medical Physiology)",
+    question: "What cardiac mechanical events produce the first (S1) and second (S2) heart sounds?",
+    answer: "S1 ('lub'): Closure of the atrioventricular valves (Mitral and Tricuspid) at the beginning of ventricular systole (isovolumetric contraction).\nS2 ('dub'): Closure of the semilunar valves (Aortic and Pulmonic) at the end of ventricular systole / start of ventricular diastole (isovolumetric relaxation).",
+    explanation: "Correlating S1 and S2 with the carotid pulse (S1 precedes or coincides with carotid upstroke) is vital for accurate cardiac murmur timing.",
+    difficulty: "Medium",
+    tag: "Physiology",
+    status: "mastered",
+    intervalDays: 20,
+    timesReviewed: 5
+  },
+  {
+    id: "fc-res-1",
+    deckId: "deck-res-high-yield",
+    deckTitle: "Research Methods & Biostatistics",
+    question: "Why can Relative Risk (RR) be directly calculated in a Cohort Study but ONLY Odds Ratio (OR) in a Case-Control Study?",
+    answer: "Cohort studies follow exposed and unexposed populations over time, allowing direct calculation of incidence rates. In Case-Control studies, the researcher predetermines the number of cases and controls, so true population incidence cannot be calculated—only the odds of exposure among cases versus controls (Odds Ratio).",
+    explanation: "When the disease outcome is rare in the general population, the Odds Ratio closely approximates the Relative Risk.",
+    difficulty: "Hard",
+    tag: "Research & Biostatistics",
+    status: "learning",
+    intervalDays: 5,
+    timesReviewed: 2
+  },
+  {
+    id: "fc-res-2",
+    deckId: "deck-res-high-yield",
+    deckTitle: "Research Methods & Biostatistics",
+    question: "What are the three fundamental ethical principles of the Belmont Report, and how is each applied in clinical nursing and medical research?",
+    answer: "1. Respect for Persons (Autonomy): Acknowledging autonomy and protecting individuals with diminished autonomy via informed voluntary consent.\n2. Beneficence: Maximizing potential benefits while minimizing potential harms ('do no harm').\n3. Justice: Fair distribution of research burdens and benefits; equitable participant selection without exploiting vulnerable groups.",
+    explanation: "All Institutional Review Boards (IRB) evaluate clinical trials and health student dissertations strictly through these three Belmont ethical lenses.",
+    difficulty: "Medium",
+    tag: "Research & Biostatistics",
+    status: "mastered",
+    intervalDays: 14,
+    timesReviewed: 4
+  },
   {
     id: "fc-1",
     deckId: "deck-obs-high-yield",
@@ -2167,6 +3031,82 @@ export const initialVideoLectures: VideoLecture[] = [
 ];
 
 export const initialQuizQuestions: QuizQuestion[] = [
+  {
+    id: "q-med-1",
+    question: "A 58-year-old male with type 2 diabetes presents to the medical assessment unit with crushing retrosternal chest pain radiating to his left jaw. His ECG shows 3mm ST-segment elevations in leads II, III, and aVF with reciprocal depression in leads I and aVL. Which anatomical coronary artery is most likely occluded?",
+    options: [
+      "Left Anterior Descending (LAD) Artery",
+      "Right Coronary Artery (RCA) causing Inferior STEMI",
+      "Left Circumflex Artery (LCx)",
+      "Left Main Coronary Artery (LMCA)"
+    ],
+    correctIndex: 1,
+    rationale: "ST elevation in leads II, III, and aVF localizes to the inferior myocardial wall, which is perfused by the Right Coronary Artery (RCA) in approximately 85-90% of individuals (right-dominant circulation). Nitroglycerin must be given with extreme caution because inferior STEMIs frequently involve the right ventricle, making preload critically vital.",
+    clinicalContext: "Internal Medicine / Cardiology",
+    difficulty: "Advanced",
+    author: "Dr. Francisca Darko",
+    courseId: "course-med-201",
+    courseTitle: "Medicine",
+    timesAttempted: 142,
+    timesCorrect: 118
+  },
+  {
+    id: "q-surg-1",
+    question: "A 24-year-old female is admitted with suspected acute appendicitis. During physical examination, palpation of the patient's Left Lower Quadrant (LLQ) elicits acute, localized pain in the Right Lower Quadrant (RLQ). What is the specific clinical sign described?",
+    options: [
+      "Murphy's Sign",
+      "Rovsing's Sign",
+      "Psoas Sign",
+      "Grey Turner's Sign"
+    ],
+    correctIndex: 1,
+    rationale: "Rovsing's sign is positive when deep pressure applied to the descending colon in the left lower quadrant pushes retrograde colonic gas into the cecum, stretching the inflamed appendix and eliciting referred pain at McBurney's point in the right lower quadrant.",
+    clinicalContext: "General Surgery / Acute Abdomen",
+    difficulty: "Intermediate",
+    author: "Prof. Samuel Antwi-Boasiako",
+    courseId: "course-surg-201",
+    courseTitle: "Surgery",
+    timesAttempted: 165,
+    timesCorrect: 148
+  },
+  {
+    id: "q-phys-1",
+    question: "According to the Frank-Starling Law of the Heart, what is the primary mechanism by which an increase in ventricular end-diastolic volume (preload) leads to a proportional increase in stroke volume?",
+    options: [
+      "Increased sympathetic stimulation of beta-1 adrenergic receptors",
+      "Optimal actin-myosin cross-bridge overlap and increased troponin C calcium sensitivity upon myocardial stretch",
+      "Decreased systemic afterload across the aortic root",
+      "Accelerated calcium uptake into the sarcoplasmic reticulum by SERCA2a"
+    ],
+    correctIndex: 1,
+    rationale: "The Frank-Starling law states that myocardial contractile force increases as end-diastolic muscle fiber length increases up to an optimal sarcomere length (~2.2 micrometers). This elongation optimizes actin-myosin filament overlap and increases myofilament sensitivity to ionized calcium, enabling stronger systolic contraction.",
+    clinicalContext: "Human Physiology / Cardiovascular Hemodynamics",
+    difficulty: "Advanced",
+    author: "Dr. Cynthia Agyemang",
+    courseId: "course-phys-101",
+    courseTitle: "Physiology",
+    timesAttempted: 130,
+    timesCorrect: 98
+  },
+  {
+    id: "q-res-1",
+    question: "In evidence-based nursing and healthcare research, when formulating a clinical question using the PICO framework, what do the four letters represent?",
+    options: [
+      "Problem, Investigation, Control, Outcome",
+      "Population/Patient/Problem, Intervention, Comparison, Outcome",
+      "Protocol, Implementation, Clinical assessment, Observation",
+      "Prevalence, Incidence, Causation, Odds ratio"
+    ],
+    correctIndex: 1,
+    rationale: "The PICO framework standardizes clinical research inquiry: P = Patient, Population, or Problem; I = Intervention or exposure of interest; C = Comparison or control intervention; O = Clinical Outcome measured. It ensures search strategies in databases like PubMed/CINAHL yield relevant clinical trials.",
+    clinicalContext: "Research Methods & Biostatistics / Evidence-Based Practice",
+    difficulty: "Intermediate",
+    author: "Prof. Eric Osei-Tutu",
+    courseId: "course-res-301",
+    courseTitle: "Research Methods",
+    timesAttempted: 154,
+    timesCorrect: 139
+  },
   {
     id: "q-1",
     question: "A primigravida at 39 weeks of gestation presents with sudden painless, bright red vaginal bleeding. Which nursing intervention is STRICTLY contraindicated?",

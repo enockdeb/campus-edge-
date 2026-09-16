@@ -248,6 +248,10 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                     <span>Course registration, clinical hours & licensure prep</span>
                   </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>Classroom Hub with Stream, Coursework & EdgeAI Draft Reviews</span>
+                  </div>
                 </>
               ) : (
                 <>
@@ -261,7 +265,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span>Licensure quiz authoring & clinical video masterclasses</span>
+                    <span>Native Classroom Hub authoring, assignment grading & announcements</span>
                   </div>
                 </>
               )}

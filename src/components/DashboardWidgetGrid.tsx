@@ -20,6 +20,7 @@ import {
   initialQuizTrendData
 } from "../data/initialData";
 import { LearningProgressChart } from "./LearningProgressChart";
+import { CurriculumMasteryWidget } from "./CurriculumMasteryWidget";
 import {
   BookOpen,
   CheckCircle2,
@@ -180,6 +181,14 @@ export const DashboardWidgetGrid: React.FC<DashboardWidgetGridProps> = ({
               <BookOpen className="w-4 h-4" />
               <span>Continue Milestone</span>
               <ArrowRight className="w-4 h-4" />
+            </button>
+            <button
+              id="dash-classroom-hub-btn"
+              onClick={() => onNavigate("classroom")}
+              className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 font-semibold text-sm border border-emerald-400/30 transition-all cursor-pointer"
+            >
+              <GraduationCap className="w-4 h-4 text-emerald-400" />
+              <span>Classroom Hub</span>
             </button>
             <button
               id="dash-quick-register-btn"
@@ -365,6 +374,13 @@ export const DashboardWidgetGrid: React.FC<DashboardWidgetGridProps> = ({
         moduleStats={moduleStats}
         trendData={trendData}
         onNavigate={onNavigate}
+      />
+
+      {/* Recharts Curriculum Mastery Radar Chart Widget */}
+      <CurriculumMasteryWidget
+        courses={courses}
+        onNavigate={onNavigate}
+        onOpenTutorWithTopic={onOpenTutorWithTopic}
       />
 
       {/* Two Column Layout: Main Widgets & Sidebar Widgets */}
